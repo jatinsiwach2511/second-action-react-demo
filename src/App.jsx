@@ -1,15 +1,9 @@
-// App.js
-import React from 'react';
-import { PDFDownloadLink } from '@react-pdf/renderer';
-import MyDocument from './Pdf';
+import React from 'react'
 
-const App = () => (
-  <div>
-    <h2>PDF with Image</h2>
-    <PDFDownloadLink document={<MyDocument />} fileName="logo-pdf.pdf">
-      {({ loading }) => (loading ? 'Loading PDF...' : 'Download PDF')}
-    </PDFDownloadLink>
-  </div>
-);
+function App() {
+  return (
+    <div>App React</div>
+  )
+}
 
-export default App;
+export default App
