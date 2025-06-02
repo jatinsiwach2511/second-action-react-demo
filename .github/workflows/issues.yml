@@ -1,0 +1,19 @@
+name: issue handler
+on:
+  issues:
+    types:
+      - opened
+      - edited
+      - closed
+      - labeled
+jobs:
+  handle_issues:
+    runs-on: ubuntu-latest
+    steps:
+      - name: log issue event
+        run: |
+          echo "Issue event triggered======"
+          echo "Action====== :${github.event.action}"
+          echo "event======= : ${github.event}"
+          echo "Issue title========: ${github.event.issue.title}"
+          echo "Issue number=======: ${github.event.issue.number}"
